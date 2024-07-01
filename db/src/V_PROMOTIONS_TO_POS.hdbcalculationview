@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="V_PROMOTIONS_TO_POS" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="V_PROMOTIONS_TO_POS"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="PROMOTIONS_TOPROMOTIONSTOPOS">
+    <resourceUri>PROMOTIONS_TOPROMOTIONSTOPOS</resourceUri>
+  </DataSource>
+  <DataSource id="FERRERO_TOPRODUCTSTOPOSTOPROMOS">
+    <resourceUri>FERRERO_TOPRODUCTSTOPOSTOPROMOS</resourceUri>
+  </DataSource>
+  <DataSource id="FERRERO_POS">
+    <resourceUri>FERRERO_POS</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1_1" cardinality="C1_1" joinType="inner" multiJoinNode="Join_1" multiJoinCentralTable="PROMOTIONS_TOPROMOTIONSTOPOS" multiJoinOrder="Outside In">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="MODIFIEDAT"/>
+      <viewAttribute id="MODIFIEDBY"/>
+      <viewAttribute id="TF"/>
+      <viewAttribute id="MANDATORY"/>
+      <viewAttribute id="DEBUT"/>
+      <viewAttribute id="FININCITATION"/>
+      <viewAttribute id="DEBUT2"/>
+      <viewAttribute id="FINREALISATION"/>
+      <viewAttribute id="DEBUT3"/>
+      <viewAttribute id="FINIMPLEMENTATION"/>
+      <viewAttribute id="TIMESTAMP"/>
+      <viewAttribute id="NOMBREQUARTSDEPALETTES"/>
+      <viewAttribute id="NOMBREDEPLV"/>
+      <viewAttribute id="SALESORG"/>
+      <viewAttribute id="SEASON"/>
+      <viewAttribute id="SEMAINDEBUT"/>
+      <viewAttribute id="SEMAINFIN"/>
+      <viewAttribute id="SEASONALORPERMANENT"/>
+      <viewAttribute id="POS_ID"/>
+      <viewAttribute id="STATUS_ID"/>
+      <viewAttribute id="PLACEMENT_ID"/>
+      <viewAttribute id="ORIGINALPROMO_ID"/>
+      <viewAttribute id="GROUPEDPROMO_ID"/>
+      <viewAttribute id="FATHERPROMO_ID"/>
+      <viewAttribute id="ID_2"/>
+      <viewAttribute id="CREATEDAT_2"/>
+      <viewAttribute id="CREATEDBY_2"/>
+      <viewAttribute id="MODIFIEDAT_2"/>
+      <viewAttribute id="MODIFIEDBY_2"/>
+      <viewAttribute id="QTERECO"/>
+      <viewAttribute id="QTERECOQUINT"/>
+      <viewAttribute id="QTEUEVEND"/>
+      <viewAttribute id="QTEUEVENDQUINT"/>
+      <viewAttribute id="TIMESTAMP_1"/>
+      <viewAttribute id="SALESORG_1"/>
+      <viewAttribute id="PRO1"/>
+      <viewAttribute id="PRO"/>
+      <viewAttribute id="CDEA1"/>
+      <viewAttribute id="RETA1"/>
+      <viewAttribute id="UVCA1"/>
+      <viewAttribute id="UEA1"/>
+      <viewAttribute id="CDEUE1"/>
+      <viewAttribute id="CDEUE2"/>
+      <viewAttribute id="CDEUE3"/>
+      <viewAttribute id="CDEUVC"/>
+      <viewAttribute id="CAA"/>
+      <viewAttribute id="EVOLCAAPERC"/>
+      <viewAttribute id="EVOLPDSPERC"/>
+      <viewAttribute id="POIDSKG"/>
+      <viewAttribute id="PDSPERC"/>
+      <viewAttribute id="TOPROMOTIONSTOPOS_ID"/>
+      <viewAttribute id="PRODUCT_ID"/>
+      <viewAttribute hidden="true" id="JOIN$ID$TOPROMOTIONSTOPOS_ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="PROMOTIONS_TOPROMOTIONSTOPOS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDAT" source="MODIFIEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDBY" source="MODIFIEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TF" source="TF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDATORY" source="MANDATORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBUT" source="DEBUT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FININCITATION" source="FININCITATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBUT2" source="DEBUT2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINREALISATION" source="FINREALISATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBUT3" source="DEBUT3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINIMPLEMENTATION" source="FINIMPLEMENTATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TIMESTAMP" source="TIMESTAMP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NOMBREQUARTSDEPALETTES" source="NOMBREQUARTSDEPALETTES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NOMBREDEPLV" source="NOMBREDEPLV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SALESORG" source="SALESORG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEASON" source="SEASON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEMAINDEBUT" source="SEMAINDEBUT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEMAINFIN" source="SEMAINFIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEASONALORPERMANENT" source="SEASONALORPERMANENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POS_ID" source="POS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUS_ID" source="STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PLACEMENT_ID" source="PLACEMENT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORIGINALPROMO_ID" source="ORIGINALPROMO_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GROUPEDPROMO_ID" source="GROUPEDPROMO_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FATHERPROMO_ID" source="FATHERPROMO_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ID$TOPROMOTIONSTOPOS_ID" source="ID"/>
+    </input>
+    <input node="FERRERO_TOPRODUCTSTOPOSTOPROMOS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_2" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_2" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_2" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDAT_2" source="MODIFIEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDBY_2" source="MODIFIEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTERECO" source="QTERECO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTERECOQUINT" source="QTERECOQUINT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTEUEVEND" source="QTEUEVEND"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTEUEVENDQUINT" source="QTEUEVENDQUINT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TIMESTAMP_1" source="TIMESTAMP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SALESORG_1" source="SALESORG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRO1" source="PRO1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRO" source="PRO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEA1" source="CDEA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RETA1" source="RETA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVCA1" source="UVCA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEA1" source="UEA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUE1" source="CDEUE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUE2" source="CDEUE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUE3" source="CDEUE3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUVC" source="CDEUVC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CAA" source="CAA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EVOLCAAPERC" source="EVOLCAAPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EVOLPDSPERC" source="EVOLPDSPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POIDSKG" source="POIDSKG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PDSPERC" source="PDSPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOPROMOTIONSTOPOS_ID" source="TOPROMOTIONSTOPOS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCT_ID" source="PRODUCT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ID$TOPROMOTIONSTOPOS_ID" source="TOPROMOTIONSTOPOS_ID"/>
+    </input>
+    <joinAttribute name="JOIN$ID$TOPROMOTIONSTOPOS_ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1_2" cardinality="C1_1" joinType="inner" multiJoinNode="Join_1" multiJoinCentralTable="PROMOTIONS_TOPROMOTIONSTOPOS" multiJoinOrder="Outside In">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="MODIFIEDAT"/>
+      <viewAttribute id="MODIFIEDBY"/>
+      <viewAttribute id="TF"/>
+      <viewAttribute id="MANDATORY"/>
+      <viewAttribute id="DEBUT"/>
+      <viewAttribute id="FININCITATION"/>
+      <viewAttribute id="DEBUT2"/>
+      <viewAttribute id="FINREALISATION"/>
+      <viewAttribute id="DEBUT3"/>
+      <viewAttribute id="FINIMPLEMENTATION"/>
+      <viewAttribute id="TIMESTAMP"/>
+      <viewAttribute id="NOMBREQUARTSDEPALETTES"/>
+      <viewAttribute id="NOMBREDEPLV"/>
+      <viewAttribute id="SALESORG"/>
+      <viewAttribute id="SEASON"/>
+      <viewAttribute id="SEMAINDEBUT"/>
+      <viewAttribute id="SEMAINFIN"/>
+      <viewAttribute id="SEASONALORPERMANENT"/>
+      <viewAttribute id="POS_ID"/>
+      <viewAttribute id="STATUS_ID"/>
+      <viewAttribute id="PLACEMENT_ID"/>
+      <viewAttribute id="ORIGINALPROMO_ID"/>
+      <viewAttribute id="GROUPEDPROMO_ID"/>
+      <viewAttribute id="FATHERPROMO_ID"/>
+      <viewAttribute id="ID_1"/>
+      <viewAttribute id="CREATEDAT_1"/>
+      <viewAttribute id="CREATEDBY_1"/>
+      <viewAttribute id="MODIFIEDAT_1"/>
+      <viewAttribute id="MODIFIEDBY_1"/>
+      <viewAttribute id="NAME"/>
+      <viewAttribute id="ADDRESS"/>
+      <viewAttribute id="BANNER_ID"/>
+      <viewAttribute id="ID_2"/>
+      <viewAttribute id="CREATEDAT_2"/>
+      <viewAttribute id="CREATEDBY_2"/>
+      <viewAttribute id="MODIFIEDAT_2"/>
+      <viewAttribute id="MODIFIEDBY_2"/>
+      <viewAttribute id="QTERECO"/>
+      <viewAttribute id="QTERECOQUINT"/>
+      <viewAttribute id="QTEUEVEND"/>
+      <viewAttribute id="QTEUEVENDQUINT"/>
+      <viewAttribute id="TIMESTAMP_1"/>
+      <viewAttribute id="SALESORG_1"/>
+      <viewAttribute id="PRO1"/>
+      <viewAttribute id="PRO"/>
+      <viewAttribute id="CDEA1"/>
+      <viewAttribute id="RETA1"/>
+      <viewAttribute id="UVCA1"/>
+      <viewAttribute id="UEA1"/>
+      <viewAttribute id="CDEUE1"/>
+      <viewAttribute id="CDEUE2"/>
+      <viewAttribute id="CDEUE3"/>
+      <viewAttribute id="CDEUVC"/>
+      <viewAttribute id="CAA"/>
+      <viewAttribute id="EVOLCAAPERC"/>
+      <viewAttribute id="EVOLPDSPERC"/>
+      <viewAttribute id="POIDSKG"/>
+      <viewAttribute id="PDSPERC"/>
+      <viewAttribute id="TOPROMOTIONSTOPOS_ID"/>
+      <viewAttribute id="PRODUCT_ID"/>
+      <viewAttribute hidden="true" id="JOIN$POS_ID$ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Join_1_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDAT" source="MODIFIEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDBY" source="MODIFIEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TF" source="TF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDATORY" source="MANDATORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBUT" source="DEBUT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FININCITATION" source="FININCITATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBUT2" source="DEBUT2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINREALISATION" source="FINREALISATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBUT3" source="DEBUT3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINIMPLEMENTATION" source="FINIMPLEMENTATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TIMESTAMP" source="TIMESTAMP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NOMBREQUARTSDEPALETTES" source="NOMBREQUARTSDEPALETTES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NOMBREDEPLV" source="NOMBREDEPLV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SALESORG" source="SALESORG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEASON" source="SEASON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEMAINDEBUT" source="SEMAINDEBUT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEMAINFIN" source="SEMAINFIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEASONALORPERMANENT" source="SEASONALORPERMANENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POS_ID" source="POS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUS_ID" source="STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PLACEMENT_ID" source="PLACEMENT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORIGINALPROMO_ID" source="ORIGINALPROMO_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GROUPEDPROMO_ID" source="GROUPEDPROMO_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FATHERPROMO_ID" source="FATHERPROMO_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_2" source="ID_2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_2" source="CREATEDAT_2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_2" source="CREATEDBY_2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDAT_2" source="MODIFIEDAT_2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDBY_2" source="MODIFIEDBY_2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTERECO" source="QTERECO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTERECOQUINT" source="QTERECOQUINT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTEUEVEND" source="QTEUEVEND"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTEUEVENDQUINT" source="QTEUEVENDQUINT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TIMESTAMP_1" source="TIMESTAMP_1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SALESORG_1" source="SALESORG_1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRO1" source="PRO1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRO" source="PRO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEA1" source="CDEA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RETA1" source="RETA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVCA1" source="UVCA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEA1" source="UEA1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUE1" source="CDEUE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUE2" source="CDEUE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUE3" source="CDEUE3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CDEUVC" source="CDEUVC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CAA" source="CAA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EVOLCAAPERC" source="EVOLCAAPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EVOLPDSPERC" source="EVOLPDSPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POIDSKG" source="POIDSKG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PDSPERC" source="PDSPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOPROMOTIONSTOPOS_ID" source="TOPROMOTIONSTOPOS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCT_ID" source="PRODUCT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$POS_ID$ID" source="POS_ID"/>
+    </input>
+    <input node="FERRERO_POS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_1" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_1" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_1" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDAT_1" source="MODIFIEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MODIFIEDBY_1" source="MODIFIEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME" source="NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS" source="ADDRESS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANNER_ID" source="BANNER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$POS_ID$ID" source="ID"/>
+    </input>
+    <joinAttribute name="JOIN$POS_ID$ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="CREATEDAT" aggregationType="min"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="MODIFIEDAT" aggregationType="min"/>
+      <viewAttribute id="MODIFIEDBY"/>
+      <viewAttribute id="TF"/>
+      <viewAttribute id="MANDATORY" aggregationType="sum"/>
+      <viewAttribute id="DEBUT" aggregationType="min"/>
+      <viewAttribute id="FININCITATION" aggregationType="min"/>
+      <viewAttribute id="DEBUT2" aggregationType="min"/>
+      <viewAttribute id="FINREALISATION" aggregationType="min"/>
+      <viewAttribute id="DEBUT3" aggregationType="min"/>
+      <viewAttribute id="FINIMPLEMENTATION" aggregationType="min"/>
+      <viewAttribute id="TIMESTAMP" aggregationType="min"/>
+      <viewAttribute id="NOMBREQUARTSDEPALETTES" aggregationType="sum"/>
+      <viewAttribute id="NOMBREDEPLV" aggregationType="sum"/>
+      <viewAttribute id="SALESORG"/>
+      <viewAttribute id="SEASON"/>
+      <viewAttribute id="SEMAINDEBUT" aggregationType="sum"/>
+      <viewAttribute id="SEMAINFIN" aggregationType="sum"/>
+      <viewAttribute id="SEASONALORPERMANENT"/>
+      <viewAttribute id="POS_ID"/>
+      <viewAttribute id="STATUS_ID"/>
+      <viewAttribute id="PLACEMENT_ID"/>
+      <viewAttribute id="ORIGINALPROMO_ID"/>
+      <viewAttribute id="GROUPEDPROMO_ID"/>
+      <viewAttribute id="FATHERPROMO_ID"/>
+      <viewAttribute id="ID_1"/>
+      <viewAttribute id="CREATEDAT_1" aggregationType="min"/>
+      <viewAttribute id="CREATEDBY_1"/>
+      <viewAttribute id="MODIFIEDAT_1" aggregationType="min"/>
+      <viewAttribute id="MODIFIEDBY_1"/>
+      <viewAttribute id="NAME"/>
+      <viewAttribute id="ADDRESS"/>
+      <viewAttribute id="BANNER_ID"/>
+      <viewAttribute id="ID_2"/>
+      <viewAttribute id="CREATEDAT_2" aggregationType="min"/>
+      <viewAttribute id="CREATEDBY_2"/>
+      <viewAttribute id="MODIFIEDAT_2" aggregationType="min"/>
+      <viewAttribute id="MODIFIEDBY_2"/>
+      <viewAttribute id="QTERECO" aggregationType="sum"/>
+      <viewAttribute id="QTERECOQUINT" aggregationType="sum"/>
+      <viewAttribute id="QTEUEVEND" aggregationType="sum"/>
+      <viewAttribute id="QTEUEVENDQUINT" aggregationType="sum"/>
+      <viewAttribute id="TIMESTAMP_1" aggregationType="min"/>
+      <viewAttribute id="SALESORG_1"/>
+      <viewAttribute id="PRO1"/>
+      <viewAttribute id="PRO"/>
+      <viewAttribute id="CDEA1" aggregationType="sum"/>
+      <viewAttribute id="RETA1" aggregationType="sum"/>
+      <viewAttribute id="UVCA1" aggregationType="sum"/>
+      <viewAttribute id="UEA1" aggregationType="sum"/>
+      <viewAttribute id="CDEUE1" aggregationType="sum"/>
+      <viewAttribute id="CDEUE2" aggregationType="sum"/>
+      <viewAttribute id="CDEUE3" aggregationType="sum"/>
+      <viewAttribute id="CDEUVC" aggregationType="sum"/>
+      <viewAttribute id="CAA" aggregationType="sum"/>
+      <viewAttribute id="EVOLCAAPERC" aggregationType="sum"/>
+      <viewAttribute id="EVOLPDSPERC" aggregationType="sum"/>
+      <viewAttribute id="POIDSKG" aggregationType="sum"/>
+      <viewAttribute id="PDSPERC" aggregationType="sum"/>
+      <viewAttribute id="TOPROMOTIONSTOPOS_ID"/>
+      <viewAttribute id="PRODUCT_ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Join_1_2"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Aggregation_1">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ID"/>
+    </attribute>
+    <attribute id="CREATEDAT" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CREATEDAT"/>
+    </attribute>
+    <attribute id="CREATEDBY" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CREATEDBY"/>
+    </attribute>
+    <attribute id="MODIFIEDAT" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MODIFIEDAT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MODIFIEDAT"/>
+    </attribute>
+    <attribute id="MODIFIEDBY" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MODIFIEDBY"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MODIFIEDBY"/>
+    </attribute>
+    <attribute id="TF" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TF"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="TF"/>
+    </attribute>
+    <attribute id="MANDATORY" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDATORY"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MANDATORY"/>
+    </attribute>
+    <attribute id="DEBUT" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DEBUT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="DEBUT"/>
+    </attribute>
+    <attribute id="FININCITATION" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FININCITATION"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="FININCITATION"/>
+    </attribute>
+    <attribute id="DEBUT2" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DEBUT2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="DEBUT2"/>
+    </attribute>
+    <attribute id="FINREALISATION" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FINREALISATION"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="FINREALISATION"/>
+    </attribute>
+    <attribute id="DEBUT3" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DEBUT3"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="DEBUT3"/>
+    </attribute>
+    <attribute id="FINIMPLEMENTATION" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FINIMPLEMENTATION"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="FINIMPLEMENTATION"/>
+    </attribute>
+    <attribute id="TIMESTAMP" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TIMESTAMP"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="TIMESTAMP"/>
+    </attribute>
+    <attribute id="NOMBREQUARTSDEPALETTES" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NOMBREQUARTSDEPALETTES"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="NOMBREQUARTSDEPALETTES"/>
+    </attribute>
+    <attribute id="NOMBREDEPLV" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NOMBREDEPLV"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="NOMBREDEPLV"/>
+    </attribute>
+    <attribute id="SALESORG" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SALESORG"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SALESORG"/>
+    </attribute>
+    <attribute id="SEASON" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEASON"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SEASON"/>
+    </attribute>
+    <attribute id="SEMAINDEBUT" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEMAINDEBUT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SEMAINDEBUT"/>
+    </attribute>
+    <attribute id="SEMAINFIN" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEMAINFIN"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SEMAINFIN"/>
+    </attribute>
+    <attribute id="SEASONALORPERMANENT" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEASONALORPERMANENT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SEASONALORPERMANENT"/>
+    </attribute>
+    <attribute id="POS_ID" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POS_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="POS_ID"/>
+    </attribute>
+    <attribute id="STATUS_ID" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUS_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="STATUS_ID"/>
+    </attribute>
+    <attribute id="PLACEMENT_ID" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLACEMENT_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="PLACEMENT_ID"/>
+    </attribute>
+    <attribute id="ORIGINALPROMO_ID" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORIGINALPROMO_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ORIGINALPROMO_ID"/>
+    </attribute>
+    <attribute id="GROUPEDPROMO_ID" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GROUPEDPROMO_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="GROUPEDPROMO_ID"/>
+    </attribute>
+    <attribute id="FATHERPROMO_ID" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FATHERPROMO_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="FATHERPROMO_ID"/>
+    </attribute>
+    <attribute id="ID_1" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ID_1"/>
+    </attribute>
+    <attribute id="CREATEDAT_1" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CREATEDAT_1"/>
+    </attribute>
+    <attribute id="CREATEDBY_1" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CREATEDBY_1"/>
+    </attribute>
+    <attribute id="MODIFIEDAT_1" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MODIFIEDAT_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MODIFIEDAT_1"/>
+    </attribute>
+    <attribute id="MODIFIEDBY_1" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MODIFIEDBY_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MODIFIEDBY_1"/>
+    </attribute>
+    <attribute id="NAME" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="NAME"/>
+    </attribute>
+    <attribute id="ADDRESS" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ADDRESS"/>
+    </attribute>
+    <attribute id="BANNER_ID" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANNER_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="BANNER_ID"/>
+    </attribute>
+    <attribute id="ID_2" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID_2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ID_2"/>
+    </attribute>
+    <attribute id="CREATEDAT_2" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CREATEDAT_2"/>
+    </attribute>
+    <attribute id="CREATEDBY_2" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CREATEDBY_2"/>
+    </attribute>
+    <attribute id="MODIFIEDAT_2" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MODIFIEDAT_2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MODIFIEDAT_2"/>
+    </attribute>
+    <attribute id="MODIFIEDBY_2" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MODIFIEDBY_2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MODIFIEDBY_2"/>
+    </attribute>
+    <attribute id="QTERECO" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QTERECO"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="QTERECO"/>
+    </attribute>
+    <attribute id="QTERECOQUINT" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QTERECOQUINT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="QTERECOQUINT"/>
+    </attribute>
+    <attribute id="QTEUEVEND" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QTEUEVEND"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="QTEUEVEND"/>
+    </attribute>
+    <attribute id="QTEUEVENDQUINT" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QTEUEVENDQUINT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="QTEUEVENDQUINT"/>
+    </attribute>
+    <attribute id="TIMESTAMP_1" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TIMESTAMP_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="TIMESTAMP_1"/>
+    </attribute>
+    <attribute id="SALESORG_1" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SALESORG_1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SALESORG_1"/>
+    </attribute>
+    <attribute id="PRO1" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRO1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="PRO1"/>
+    </attribute>
+    <attribute id="PRO" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRO"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="PRO"/>
+    </attribute>
+    <attribute id="CDEA1" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CDEA1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CDEA1"/>
+    </attribute>
+    <attribute id="RETA1" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RETA1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="RETA1"/>
+    </attribute>
+    <attribute id="UVCA1" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVCA1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="UVCA1"/>
+    </attribute>
+    <attribute id="UEA1" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UEA1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="UEA1"/>
+    </attribute>
+    <attribute id="CDEUE1" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CDEUE1"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CDEUE1"/>
+    </attribute>
+    <attribute id="CDEUE2" order="54" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CDEUE2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CDEUE2"/>
+    </attribute>
+    <attribute id="CDEUE3" order="55" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CDEUE3"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CDEUE3"/>
+    </attribute>
+    <attribute id="CDEUVC" order="56" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CDEUVC"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CDEUVC"/>
+    </attribute>
+    <attribute id="CAA" order="57" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CAA"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="CAA"/>
+    </attribute>
+    <attribute id="EVOLCAAPERC" order="58" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EVOLCAAPERC"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="EVOLCAAPERC"/>
+    </attribute>
+    <attribute id="EVOLPDSPERC" order="59" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EVOLPDSPERC"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="EVOLPDSPERC"/>
+    </attribute>
+    <attribute id="POIDSKG" order="60" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POIDSKG"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="POIDSKG"/>
+    </attribute>
+    <attribute id="PDSPERC" order="61" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PDSPERC"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="PDSPERC"/>
+    </attribute>
+    <attribute id="TOPROMOTIONSTOPOS_ID" order="62" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TOPROMOTIONSTOPOS_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="TOPROMOTIONSTOPOS_ID"/>
+    </attribute>
+    <attribute id="PRODUCT_ID" order="63" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_ID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="PRODUCT_ID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  
+    <shape expanded="false" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="365"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape modelObjectName="PROMOTIONS_TOPROMOTIONSTOPOS" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="-91" y="-115"/>
+      <rectangleSize width="292.9140625"/>
+    </shape>
+    <shape modelObjectName="FERRERO_POS" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="249" y="304"/>
+      <rectangleSize width="154.685546875"/>
+    </shape>
+    <shape modelObjectName="FERRERO_TOPRODUCTSTOPOSTOPROMOS" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput" multiJoinViewNodeName="Join_1">
+      <upperLeftCorner x="538" y="-115"/>
+      <rectangleSize width="324.701171875"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="211"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,4 +1,4 @@
-namespace ferrero;
+namespace ferreroMasterData;
 
 using {
     cuid,
@@ -33,6 +33,16 @@ entity Promotions : cuid, managed {
 }
 
 @cds.autoexpose
+// Table PRODUCTS
+entity Products : cuid, managed {
+    productID : String  @title: 'Product ID'  @description: 'ID sent by C4C';
+    name      : String;
+    pcb       : Integer; // pieces of product per box
+    cuWeight  : Integer; // weight of every single piece; needed to compute QUINTAL
+    pmc       : Decimal(10, 2); // season; Recommended price of the product
+}
+
+@cds.autoexpose
 // Table POS_POTENTIAL
 entity PosPotential : cuid, managed {
     posPotential : Integer;
@@ -59,14 +69,4 @@ entity TerritoryManagement : cuid, managed {
     timestamp : Timestamp;
     valid     : Boolean; // flag that is 1 if user still associated to POS, 0 otherwise
     pos       : Association to POS;
-}
-
-@cds.autoexpose
-// Table PRODUCTS
-entity Products : cuid, managed {
-    productID : String  @title: 'Product ID'  @description: 'ID sent by C4C';
-    name      : String;
-    pcb       : Integer; // pieces of product per box
-    cuWeight  : Integer; // weight of every single piece; needed to compute QUINTAL
-    pmc       : Decimal(10, 2); // season; Recommended price of the product
 }

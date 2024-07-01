@@ -12,22 +12,8 @@ File or Folder | Purpose
 `package.json` | project metadata and configuration
 `readme.md` | this getting started guide
 
-
 ## Next Steps
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
-
-
-"cds": {
-    "requires": {
-      "auth": "xsuaa",
-      "db": "hana"
-    }
-  }
+- cds bind -2 ferrero-c4c-be-db:ferrero-c4c-be-db-key
+- cds bind -2 ferrero-c4c-be-auth:ferrero-c4c-be-auth-key
+- Open a new terminal and run `cds watch --profile hybrid` 
